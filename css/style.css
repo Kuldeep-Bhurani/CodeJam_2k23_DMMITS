@@ -44,7 +44,7 @@ body {
 	color: #1f1539;
 }
 
-.hero video {
+#heroVid {
 	width: 100%;
 	position: absolute;
 	pointer-events: none;
