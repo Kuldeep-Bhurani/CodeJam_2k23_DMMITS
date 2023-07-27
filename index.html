@@ -13,11 +13,22 @@
 
 <body class="no-mouse">
     <div id="cursor" class="cursor"></div>
-    <nav class="nav"></nav>
-    <section class="hero">
+    <nav class="nav flex">
+        <img class="logo" src="./assets/isro-logo.jpg" alt="isro">
+        <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="primary-nav"><span
+                class="sr-only">Menu</span></button>
+        <ul data-visible="false" id="primary-nav" class="flex primary-nav">
+            <li><a href="#hero"><span aria-hidden="true">00</span>Home</a></li>
+            <li><a href=""><span aria-hidden="true">01</span>Missions</a></li>
+            <li><a href=""><span aria-hidden="true">02</span>More</a></li>
+        </ul>
+    </nav>
+    <section id="hero" class="hero flex">
         <h1>ISRO</h1>
         <h2>Journey To The Stars</h2>
         <video id="heroVid" autoplay muted src="./assets/rocket.mkv"></video>
+    </section>
+    <section class="main">
     </section>
 </body>
 
