@@ -104,6 +104,17 @@ body {
 }
 
 /* *-----Home Page-----* */
+.gall > iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+	overflow: hidden;
+}
+
+.gall {
+	height: 120vh;
+}
+
 #home {
 	font-family: "Tektur", cursive;
 	background-color: #141414;
@@ -608,6 +619,15 @@ span.img_title {
 
 #main_sub img {
 	max-width: 10vw;
+}
+
+#main_sub a {
+	cursor: pointer !important;
+	margin: 0.5rem;
+}
+
+#main_sub a:hover {
+	outline: 1px solid white;
 }
 
 /* *-----History Page----- */
