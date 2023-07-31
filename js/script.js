@@ -38,8 +38,12 @@ lnks.forEach(lnk => {
             mouseCursor.classList.add("l1-grow");
         } else if (lnks.item(2) === lnk) {
             mouseCursor.classList.add("l2-grow");
-        } else {
+        } else if (lnks.item(3) === lnk) {
             mouseCursor.classList.add("l3-grow");
+        } else if (lnks.item(4) === lnk) {
+            mouseCursor.classList.add("up-grow");
+        } else {
+            mouseCursor.classList.add("social-grow");
         };
     });
     lnk.addEventListener('mouseleave', () => {
@@ -49,6 +53,8 @@ lnks.forEach(lnk => {
         mouseCursor.classList.remove("l1-grow");
         mouseCursor.classList.remove("l2-grow");
         mouseCursor.classList.remove("l3-grow");
+        mouseCursor.classList.remove("up-grow");
+        mouseCursor.classList.remove("social-grow");
     });
 });
 

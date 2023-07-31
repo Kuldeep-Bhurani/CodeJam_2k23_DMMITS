@@ -10,7 +10,7 @@
 	}
 }
 
-/* *-----Navigation-----* */
+/* *-----Navigation and Carousal-----* */
 
 @media (max-width: 35em) {
 	.primary-nav {
@@ -43,11 +43,21 @@
 	.mobile-nav-toggle[aria-expanded="true"] {
 		background-image: url("../assets/ham-close.svg");
 	}
+
+	#image-track > a > .image {
+		height: 76vmin;
+		width: 60vmin;
+	}
 }
 
 @media (min-width: 35em) and (max-width: 55em) {
 	.primary-nav li > a > [aria-hidden="true"] {
 		display: none;
+	}
+
+	#image-track > a > .image {
+		height: 66vmin;
+		width: 50vmin;
 	}
 }
 

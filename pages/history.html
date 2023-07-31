@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <script defer src="../js/script.js"></script>
+    <script defer src="../js/script.js" type="module"></script>
     <title>ISRO | Missions</title>
 </head>
 
@@ -16,7 +16,7 @@
     <div id="cursor" class="cursor"></div>
     <!-- *-----Navigation-----* -->
     <nav class="nav flex">
-        <img class="logo" src="../assets/isro-logo.jpg" alt="isro">
+        <img class="logo" src="../assets/isro-logo.jpg" alt="isro" draggable="false">
         <button class="mobile-nav-toggle lnk" aria-expanded="false" aria-controls="primary-nav"><span
                 class="sr-only">Menu</span></button>
         <ul data-visible="false" id="primary-nav" class="flex primary-nav">
@@ -25,6 +25,10 @@
             <li><a class="lnk" id="l3" href="#"><span aria-hidden="true">02</span>History</a></li>
         </ul>
     </nav>
+    <!-- *-----Scroll To Top-----* -->
+    <div class="scroll-to-top">
+        <a class="lnk" href="#"><img src="../assets/up_w.svg" alt="up"></a>
+    </div>
     <!-- *-----Page Setup-----* -->
     <!-- TODO: History Page Setup -->
     <section id="hist" class="hist flex">

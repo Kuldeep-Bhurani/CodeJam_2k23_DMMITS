@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/responsive.css">
-    <script defer src="./js/script.js"></script>
-    <script defer src="./js/home_scr.js"></script>
+    <script defer src="./js/script.js" type="module"></script>
+    <script defer src="./js/home_scr.js" type="module"></script>
     <title>ISRO | Home</title>
 </head>
 
@@ -17,7 +17,7 @@
     <div id="cursor" class="cursor"></div>
     <!-- *-----Navigation-----* -->
     <nav class="nav flex">
-        <img class="logo" src="./assets/isro-logo.jpg" alt="isro">
+        <img class="logo" src="./assets/isro-logo.jpg" alt="isro" draggable="false">
         <button class="mobile-nav-toggle lnk" aria-expanded="false" aria-controls="primary-nav"><span
                 class="sr-only">Menu</span></button>
         <ul data-visible="false" id="primary-nav" class="flex primary-nav">
@@ -26,6 +26,10 @@
             <li><a class="lnk" id="l3" href="./pages/history.html"><span aria-hidden="true">02</span>History</a></li>
         </ul>
     </nav>
+    <!-- *-----Scroll To Top-----* -->
+    <!-- <div class="scroll-to-top">
+        <a class="lnk" href="#"><img src="./assets/up_w.svg" alt="up"></a>
+    </div> -->
     <!-- *-----Page Setup-----* -->
     <!-- ///TODO: Home Page Setup -->
     <section id="hero" class="hero flex">
@@ -33,6 +37,12 @@
         <h2>Journey To The Stars</h2>
         <video id="heroVid" autoplay muted src="./assets/rocket.mkv"></video>
     </section>
+    <!-- *-----Footer-----* -->
+    <!-- <footer class="foot flex">
+        <a href="https://www.youtube.com" class="lnk"><img src="./assets/youtube.svg" alt="Youtube"></a>
+        <a href="https://www.instagram.com" class="lnk"><img src="./assets/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.x.com" class="lnk"><img src="./assets/x.svg" alt="X / Twitter"></a>
+    </footer> -->
 </body>
 
 </html>
