@@ -1,8 +1,10 @@
 /* *-----General Setup-----* */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Sintony&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tektur&display=swap");
 /* font-family: 'Sintony', sans-serif; */
 /* font-family: 'Inter', sans-serif; */
+/* font-family: 'Tektur', cursive; */
 
 * {
 	margin: 0;
@@ -22,7 +24,7 @@ button:hover {
 body {
 	background-color: #e0e0e0;
 	overflow: hidden;
-	scroll-behavior: smooth;
+	scroll-behavior: smooth !important;
 	min-height: 100svh;
 }
 
@@ -290,4 +292,45 @@ span.img_title {
 	padding-left: 0.3rem;
 }
 
-/* TODO: History Page */
+/* *-----History Page----- */
+section.hist {
+	font-family: "Tektur", cursive;
+	background-color: #141414;
+	color: #ffffff;
+	line-height: 1.6;
+	min-height: 100svh;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#hist > .section {
+	padding: 50px;
+	text-align: left;
+	margin: 20px 0;
+	border-radius: 8px;
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s, transform 0.6s;
+}
+
+#hist > .section img {
+	max-width: 100%;
+	width: 70svh;
+	border-radius: 8px;
+}
+
+#hist > .section h1 {
+	font-size: 36px;
+	margin: 20px 0;
+}
+
+#hist > .section p {
+	font-size: 18px;
+	text-align: left;
+}
+
+.fade-up-show {
+	opacity: 1 !important;
+	transform: translateY(0);
+}
