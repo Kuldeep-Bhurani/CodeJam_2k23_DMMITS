@@ -1,3 +1,5 @@
+/* *-----General Setup-----* */
+
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Sintony&display=swap");
 /* font-family: 'Sintony', sans-serif; */
 /* font-family: 'Inter', sans-serif; */
@@ -8,6 +10,11 @@
 	box-sizing: border-box;
 }
 
+a:hover,
+button:hover {
+	cursor: none;
+}
+
 .resize-animation-stopper * {
 	transition: none !important;
 }
@@ -16,11 +23,14 @@ body {
 	background-color: #e0e0e0;
 	overflow: hidden;
 	scroll-behavior: smooth;
+	min-height: 100svh;
 }
 
 .flex {
 	display: flex;
 }
+
+/* *-----Cursor Setup-----* */
 
 .no-mouse {
 	cursor: none;
@@ -33,7 +43,7 @@ body {
 	border: 2px solid black;
 	border-radius: 50%;
 	position: absolute;
-	z-index: 99999;
+	z-index: 5000;
 	transform: translate(-50%, -50%);
 	pointer-events: none;
 	backdrop-filter: grayscale(1);
@@ -43,12 +53,41 @@ body {
 }
 
 .c-grow {
-	transform: scale(1.3);
-	background: rgba(255, 255, 255, 0.9);
+	background-position-x: center;
+	background-position-y: center;
+	background-repeat: no-repeat;
+	background-size: 12px;
+	background-origin: padding-box;
+	transform: scale(3);
+	translate: -50%;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: rgba(225, 225, 225, 0.5);
 }
 
+.btn-grow-o {
+	background-image: url("../assets/ham-b.svg") !important;
+}
+
+.btn-grow-c {
+	background-image: url("../assets/ham-close-b.svg") !important;
+}
+
+.l1-grow {
+	background-image: url("../assets/home.svg") !important;
+}
+
+.l2-grow {
+	background-image: url("../assets/missions.svg") !important;
+}
+
+.l3-grow {
+	background-image: url("../assets/history.svg") !important;
+}
+
+/* *-----Home-----* */
+
 .hero {
-	height: 89vh;
+	height: 89.3svh;
 	position: relative;
 	background-color: #484748;
 	align-items: center;
@@ -96,8 +135,10 @@ h2 {
 	animation-fill-mode: forwards;
 	animation-delay: 2.9s;
 	font-family: "Inter", sans-serif;
-	bottom: 0%;
+	bottom: -1%;
 }
+
+/* *-----Animations-----* */
 
 @keyframes fade-in {
 	from {
@@ -108,6 +149,8 @@ h2 {
 		opacity: 1;
 	}
 }
+
+/* *-----Navigation-----* */
 
 .logo {
 	width: 40px;
@@ -123,7 +166,7 @@ h2 {
 	font-family: "Sintony", sans-serif;
 	padding-right: 2vw;
 	z-index: 1000;
-	pointer-events: none;
+	animation: fade-in ease 0.5s;
 }
 
 .primary-nav {
@@ -154,3 +197,7 @@ h2 {
 .mobile-nav-toggle {
 	display: none;
 }
+
+/* TODO: Missions Page */
+
+/* TODO: History Page */

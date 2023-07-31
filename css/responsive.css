@@ -1,3 +1,5 @@
+/* *-----Navigation-----* */
+
 @media (max-width: 35em) {
 	.primary-nav {
 		gap: 2em;
@@ -23,15 +25,11 @@
 		background-color: transparent;
 		background-image: url("../assets/ham.svg");
 		background-repeat: no-repeat;
-		backdrop-filter: white;
 		border: 0;
 		display: block;
 	}
 	.mobile-nav-toggle[aria-expanded="true"] {
 		background-image: url("../assets/ham-close.svg");
-	}
-	.mobile-nav-toggle:hover {
-		cursor: pointer;
 	}
 }
 
@@ -48,6 +46,8 @@
 		padding-inline: clamp(3rem, 10vw, 10rem);
 	}
 }
+
+/* *-----Home-----* */
 
 @media (max-width: 80em) {
 	.hero h1 {

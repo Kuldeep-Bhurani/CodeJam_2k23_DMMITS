@@ -1,17 +1,10 @@
 const mouseCursor = document.querySelector(".cursor");
-const cards = document.querySelectorAll(".card");
+const lnks = document.querySelectorAll(".lnk");
 const cursorDiv = document.getElementById("cursor");
-const vid = document.getElementById("heroVid");
 const scr_w = screen.width;
 const nav = document.querySelector(".nav")
 const primaryNav = document.querySelector(".primary-nav")
 const navToggle = document.querySelector(".mobile-nav-toggle")
-
-
-setTimeout(() => {
-    nav.style.pointerEvents = "all";
-}, 1800);
-
 
 navToggle.addEventListener('click', () => {
     const visibility = primaryNav.getAttribute("data-visible");
@@ -24,8 +17,6 @@ navToggle.addEventListener('click', () => {
     };
 })
 
-vid.playbackRate = 0.9;
-
 window.addEventListener('mousemove', cursor);
 
 function cursor(e) {
@@ -33,12 +24,31 @@ function cursor(e) {
     mouseCursor.style.left = e.pageX + 'px'
 };
 
-cards.forEach(card => {
-    card.addEventListener('mouseover', () => {
+lnks.forEach(lnk => {
+    lnk.addEventListener('mouseover', () => {
         mouseCursor.classList.add("c-grow");
+        if (lnks.item(0) === lnk) {
+            const visibility = primaryNav.getAttribute("data-visible");
+            if (visibility === "false") {
+                mouseCursor.classList.add("btn-grow-o");
+            } else {
+                mouseCursor.classList.add("btn-grow-c");
+            };
+        } else if (lnks.item(1) === lnk) {
+            mouseCursor.classList.add("l1-grow");
+        } else if (lnks.item(2) === lnk) {
+            mouseCursor.classList.add("l2-grow");
+        } else {
+            mouseCursor.classList.add("l3-grow");
+        };
     });
-    card.addEventListener('mouseleave', () => {
+    lnk.addEventListener('mouseleave', () => {
         mouseCursor.classList.remove("c-grow");
+        mouseCursor.classList.remove("btn-grow-o");
+        mouseCursor.classList.remove("btn-grow-c");
+        mouseCursor.classList.remove("l1-grow");
+        mouseCursor.classList.remove("l2-grow");
+        mouseCursor.classList.remove("l3-grow");
     });
 });
 

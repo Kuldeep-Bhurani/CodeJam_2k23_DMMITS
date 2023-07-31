@@ -8,27 +8,30 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <script defer src="./js/script.js"></script>
+    <script defer src="./js/home_scr.js"></script>
     <title>ISRO | Home</title>
 </head>
 
 <body class="no-mouse">
+    <!-- *-----Cursor Setup-----* -->
     <div id="cursor" class="cursor"></div>
+    <!-- *-----Navigation-----* -->
     <nav class="nav flex">
         <img class="logo" src="./assets/isro-logo.jpg" alt="isro">
-        <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="primary-nav"><span
+        <button class="mobile-nav-toggle lnk" aria-expanded="false" aria-controls="primary-nav"><span
                 class="sr-only">Menu</span></button>
         <ul data-visible="false" id="primary-nav" class="flex primary-nav">
-            <li><a href="#hero"><span aria-hidden="true">00</span>Home</a></li>
-            <li><a href=""><span aria-hidden="true">01</span>Missions</a></li>
-            <li><a href=""><span aria-hidden="true">02</span>More</a></li>
+            <li><a class="lnk" id="l1" href="#"><span aria-hidden="true">00</span>Home</a></li>
+            <li><a class="lnk" id="l2" href="./pages/missions.html"><span aria-hidden="true">01</span>Missions</a></li>
+            <li><a class="lnk" id="l3" href="./pages/history.html"><span aria-hidden="true">02</span>History</a></li>
         </ul>
     </nav>
+    <!-- *-----Page Setup-----* -->
+    <!-- ///TODO: Home Page Setup -->
     <section id="hero" class="hero flex">
         <h1>ISRO</h1>
         <h2>Journey To The Stars</h2>
         <video id="heroVid" autoplay muted src="./assets/rocket.mkv"></video>
-    </section>
-    <section class="main">
     </section>
 </body>
 
