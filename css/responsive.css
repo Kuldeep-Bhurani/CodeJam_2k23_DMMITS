@@ -70,12 +70,211 @@
 }
 
 /* *-----Home-----* */
-
-@media (max-width: 80em) {
-	.hero h1 {
-		font-size: 8vw;
+@media screen and (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		align-items: center;
 	}
-	.hero h2 {
+
+	.logo img {
+		position: relative;
+
+		margin-top: 0px;
+		margin-bottom: 30px;
+	}
+
+	nav ul {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	nav li {
+		margin: 10px 0;
+	}
+
+	.hero {
+		background-attachment: scroll;
+	}
+
+	.explore-btn {
+		position: relative;
+		margin-top: 450px;
+		margin-bottom: 0;
+		width: 40%;
+		text-align: center;
+		min-width: 150px;
+	}
+
+	.explore-btn a {
+		font-size: 14px;
+	}
+
+	.center-text {
 		font-size: 4vw;
+		min-width: 100%;
+		font-family: "Tektur";
+	}
+
+	.navbar img {
+		position: relative;
+		top: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 50px;
+		width: 60px;
+		z-index: 1;
+	}
+	.article {
+		opacity: 1;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin: 30px;
+		transition: transform 0.5s ease;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.logo img {
+		position: relative;
+		margin-top: 0px;
+		margin-bottom: 30px;
+	}
+
+	nav ul {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	nav li {
+		margin: 10px 0;
+	}
+
+	.hero {
+		background-attachment: scroll;
+	}
+
+	.explore-btn {
+		position: relative;
+		margin-top: 450px;
+		margin-bottom: 0;
+		width: 40%;
+		text-align: center;
+		min-width: 150px;
+	}
+
+	.explore-btn a {
+		font-size: 14px;
+	}
+
+	.center-text {
+		font-size: 4vw;
+		min-width: 100%;
+		font-family: "Tektur";
+	}
+
+	.navbar img {
+		position: relative;
+		top: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 50px;
+		width: 60px;
+		z-index: 1;
+	}
+
+	.article {
+		opacity: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin: 30px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.space-agencies {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	.agency {
+		width: 120px;
+		height: 120px;
+	}
+
+	.section-heading {
+		background-color: rgba(255, 0, 0, 0);
+		border: 1.5px solid white;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.philosophy-content {
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.latest-videos {
+		padding: 20px 0;
+	}
+}
+
+@media screen and (max-width: 281px) {
+	.navbar img {
+		height: 30px;
+		width: 36px;
+	}
+
+	.explore-btn {
+		margin-top: 300px;
+	}
+
+	.center-text {
+		font-size: 5vw;
+	}
+
+	.article {
+		margin: 15px;
+	}
+
+	.article-img {
+		flex: 0 0 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.article h2 {
+		font-size: 18px;
+	}
+
+	.article p {
+		font-size: 14px;
+	}
+
+	.read-more a {
+		font-size: 12px;
+	}
+
+	.space-agencies {
+		flex-wrap: wrap;
+	}
+
+	.agency {
+		width: 80px;
+		height: 80px;
+	}
+
+	.img2 img {
+		width: 72px;
+		height: 51px;
 	}
 }

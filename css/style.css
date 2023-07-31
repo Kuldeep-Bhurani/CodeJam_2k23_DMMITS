@@ -10,6 +10,11 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth !important;
+}
+
+html {
+	scroll-behavior: smooth !important;
 }
 
 a:hover,
@@ -23,7 +28,6 @@ button:hover {
 
 body {
 	background-color: #e0e0e0;
-	overflow: hidden;
 	scroll-behavior: smooth !important;
 	min-height: 100svh;
 }
@@ -100,69 +104,316 @@ body {
 }
 
 /* *-----Home Page-----* */
+#home {
+	font-family: "Tektur", cursive;
+	background-color: #141414;
+	color: #fff;
+}
 
 .hero {
-	height: 89.3svh;
 	position: relative;
-	background-color: #484748;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.hero video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.4;
+}
+
+.explore-btn {
+	position: absolute;
+	bottom: 110px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 2.5px 2px;
+	background-color: transparent;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	transition: all 0.3s;
+	opacity: 0; /* Initially hide the button */
+	animation: fade-in 0.5s linear forwards;
+}
+
+.explore-btn a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	display: block;
+	padding: 15.5px 35px;
+}
+
+.explore-btn:hover {
+	background-color: #fff;
+}
+
+.explore-btn:hover a {
+	color: #000;
+}
+
+.home img {
+	position: relative;
+	height: 1rem;
+	width: 1rem;
+}
+
+.center-text {
+	font-size: 4vw;
+	font-family: "Tektur";
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: transparent;
+	z-index: 2;
+	pointer-events: none;
+	animation: fadeInText 1.5s linear 7.5s forwards;
+	min-width: 100%;
+	box-sizing: border-box;
+}
+
+.articles {
+	height: 200vh;
+
+	transition: opacity 1s;
+	font-family: "Courier New", Courier, monospace;
+}
+
+.main {
+	padding: 20px;
+}
+
+.article {
+	opacity: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 30px;
+	padding-bottom: 1rem;
+	transition: transform 0.5s ease;
+}
+
+.article-img {
+	flex: 0 0 200px;
+	margin-right: 20px;
+}
+
+.article-img img {
+	width: 100%;
+	height: auto;
+}
+
+.article-text {
+	flex: 1 1 300px;
+}
+
+.article h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.article p {
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.read-more {
+	margin-top: 20px;
+	text-align: left;
+}
+
+.read-more a {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: transparent;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	transition: all 0.3s;
+}
+
+.read-more a:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+.section-heading {
+	text-align: center;
+	padding: 20px;
+	background-color: transparent;
+}
+
+.space-agencies {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+}
+
+.agency {
+	width: 250px;
+	height: 250px;
+	margin: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.img2 img {
+	width: 240px;
+	height: 170px;
+	margin: 10px;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
 }
 
-.hero video {
+.agency img {
+	height: 110px;
+	width: 140px;
+}
+
+.article-text p {
+	font-family: sans-serif;
+}
+
+.philosophy-section {
+	position: relative;
+	padding: 50px 0;
+}
+
+.philosophy-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	height: 100%;
-	position: absolute;
-	pointer-events: none;
+	background-image: url("https://www.aljazeera.com/wp-content/uploads/2015/09/a2db6548dc3a40699e8a5cde1e6930d4_6.jpeg");
+	background-size: cover;
+	background-position: center;
+	opacity: 0.4;
+	z-index: -1;
+}
+
+.philosophy-content {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	color: white;
+	position: relative;
 	z-index: 1;
-	opacity: 0;
-	animation: fade-in ease 0.5s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-	animation-delay: 0.2s;
 }
 
-.hero h1,
-h2 {
+.philosophy-heading {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.philosophy-content p {
+	font-size: 18px;
+}
+
+.philosophy-section p {
+	font-family: sans-serif;
+}
+
+.latest-videos {
+	padding: 50px 0;
+	text-align: center;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+	margin: 20px;
+}
+
+.video-container iframe {
 	position: absolute;
-	z-index: 2;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	opacity: 0;
-	color: rgba(252, 252, 252, 0.9);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
-.hero h1 {
-	font-size: 5rem;
-	animation: fade-in ease 1s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-	animation-delay: 2.7s;
-	font-family: "Sintony", sans-serif;
-	top: 6%;
+.unusual-text {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.hero h2 {
-	font-size: 2.5rem;
-	margin: 5rem 0;
-	animation: fade-in ease 1s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-	animation-delay: 2.9s;
-	font-family: "Inter", sans-serif;
-	bottom: -1%;
+.article:hover {
+	transform: translateY(-20px);
 }
 
 /* *-----Animations-----* */
-
 @keyframes fade-in {
 	from {
 		opacity: 0;
 	}
-
 	to {
 		opacity: 1;
 	}
+}
+
+@keyframes fadeInText {
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slideInFromBottom {
+	0% {
+		transform: translateY(20%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.animate-in {
+	animation: slideInFromBottom 0.5s forwards;
+}
+
+.animate-stt-in {
+	animation: slideInFromBottom 0.5s forwards;
+}
+
+.animate-stt-in > a {
+	pointer-events: all;
+}
+
+@keyframes slideInFromBottom {
+	0% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.in-view {
+	animation: slideInFromBottom 1s forwards;
 }
 
 /* *-----Navigation-----* */
@@ -224,20 +475,32 @@ h2 {
 	background: black;
 	border: 2px solid black;
 	border-radius: 50%;
+	opacity: 0;
+	pointer-events: none;
 }
 
 /* *-----Footer-----* */
 
 .foot {
 	height: 10svh;
-	gap: 3.5em;
+	gap: 1em;
 	justify-content: center;
 	align-items: center;
+	font-family: "Sintony", sans-serif;
+	flex-wrap: wrap;
+	margin-bottom: 2vh;
+	margin-inline: 3svw;
 }
 
 .foot img {
 	height: 40px;
 	width: 40px;
+}
+
+.medialnks {
+	gap: 3.5em;
+	justify-content: center;
+	align-items: center;
 }
 
 /* *-----Missions Page-----* */
@@ -292,6 +555,61 @@ span.img_title {
 	padding-left: 0.3rem;
 }
 
+/* *-----Missions Sub Page-----* */
+
+.back-button {
+	display: inline-block;
+	background-color: #fff;
+	color: #000;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	margin-top: 20px;
+	transition: background-color 0.3s;
+}
+
+.back-button:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+#main_sub {
+	font-family: "Tektur", Arial, sans-serif;
+	line-height: 1.6;
+	padding: 20px;
+	color: #fff;
+	/* White text color */
+	background-color: #141414;
+	overflow-y: scroll;
+	/* Black background color */
+	height: 200vh;
+}
+
+#main_sub h1 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+#main_sub p {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.launch-container {
+	display: flex;
+	align-items: center;
+}
+
+.launch-container img {
+	max-width: 10vw;
+	border-radius: 8px;
+	margin-right: 20px;
+}
+
+#main_sub img {
+	max-width: 10vw;
+}
+
 /* *-----History Page----- */
 section.hist {
 	font-family: "Tektur", cursive;
@@ -309,7 +627,7 @@ section.hist {
 	text-align: left;
 	margin: 20px 0;
 	border-radius: 8px;
-	opacity: 0;
+	/* opacity: 0; */
 	transform: translateY(20px);
 	transition: opacity 0.6s, transform 0.6s;
 }

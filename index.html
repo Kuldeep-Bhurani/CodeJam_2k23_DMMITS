@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/responsive.css">
     <script defer src="./js/script.js" type="module"></script>
     <script defer src="./js/home_scr.js" type="module"></script>
+    <script defer src="./js/gtTop_scr.js" type="module"></script>
     <title>ISRO | Home</title>
 </head>
 
@@ -26,19 +27,174 @@
             <li><a class="lnk" id="l3" href="./pages/history.html"><span aria-hidden="true">02</span>History</a></li>
         </ul>
     </nav>
+    <!-- *-----Scroll To Top-----* -->
+    <div id="scroll-to-top" class="scroll-to-top">
+        <a class="lnk" href="#"><img src="../assets/up_w.svg" alt="up"></a>
+    </div>
     <!-- *-----Page Setup-----* -->
     <!-- ///TODO: Home Page Setup -->
-    <section id="hero" class="hero flex">
-        <h1>ISRO</h1>
-        <h2>Journey To The Stars</h2>
-        <video id="heroVid" autoplay muted src="./assets/rocket.mkv"></video>
+    <section id="home">
+        <div class="hero">
+            <video src="./assets/rocket.mp4" autoplay muted></video>
+            <div class="explore-btn lnk">
+                <a href="#explore">Explore</a>
+            </div>
+        </div>
+        <div>
+            <div class="center-text">
+                <p>INDIAN SPACE RESEARCH ORGANIZATION</p>
+            </div>
+        </div>
+
+
+        <section class="philosophy-section">
+            <div class="philosophy-content">
+                <h2 class="philosophy-heading">Journey to the Stars</h2>
+                <p>
+                    ISRO's significance lies in its pioneering efforts, showcasing India's self-reliance in space
+                    technology,
+                    conducting ambitious interplanetary missions like Mangalyaan and Chandrayaan, bridging digital
+                    divides through
+                    remote sensing satellites, aiding disaster management, and fostering international space cooperation
+                    through
+                    commercial launches and collaborative missions, all while maintaining cost-effectiveness and
+                    contributing to
+                    scientific research and innovation. VISIT THE MISSIONS PAGE FROM THE NAVIGATION BAR FOR MORE.
+                </p>
+            </div>
+        </section>
+
+
+
+        <main>
+            <div>
+                <div class="article">
+                    <div class="article-img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/1059px-Indian_Space_Research_Organisation_Logo.svg.png"
+                            alt="ISRO Logo">
+                    </div>
+                    <div class="article-text animate-in" id="explore">
+                        <h2>About ISRO</h2>
+                        <p>
+                            The Indian Space Research Organisation (ISRO) is the space agency of the Government of
+                            India, headquartered
+                            in Bengaluru. It was founded in 1969 with the vision of harnessing space technology for
+                            national
+                            development.
+                        </p>
+                        <p>
+                            ISRO has achieved numerous milestones, including launching satellites for communication,
+                            remote sensing,
+                            navigation, and scientific research. It is renowned for its cost-effective space missions
+                            and has made
+                            significant contributions to space exploration.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--article about Chandrayaan mission -->
+            <div class="article">
+                <div class="article-img">
+                    <img src="https://cdn.thewire.in/wp-content/uploads/2021/09/11164744/ch-2-cruise-configuration.jpg"
+                        alt="Chandrayaan Image">
+                </div>
+                <div class="article-text animate-in">
+                    <h2>Chandrayaan Mission</h2>
+                    <p>
+                        Chandrayaan is India's lunar exploration program. The first mission, Chandrayaan-1, was launched
+                        in 2008 and
+                        was India's first mission to the Moon. It made significant discoveries, including the presence
+                        of water
+                        molecules on the lunar surface.
+                    </p>
+                    <p>
+                        In 2019, ISRO launched Chandrayaan-2, a more ambitious mission with an orbiter, lander, and
+                        rover. While the
+                        lander Vikram had a hard landing, the orbiter continues to provide valuable data about the Moon.
+                    </p>
+                    <div class="read-more lnk">
+                        <a href="./pages/missions.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--article about Mangalyaan mission -->
+            <div id="missions">
+                <div class="article">
+                    <div class="article-img">
+                        <img src="https://apuedge.com/wp-content/uploads/AdobeStock_225316801eee.jpg"
+                            alt="Mangalyaan Image">
+                    </div>
+                    <div class="article-text">
+                        <h2>Mangalyaan Mission</h2>
+                        <p>
+                            Mangalyaan, also known as the Mars Orbiter Mission, is India's first interplanetary mission.
+                            Launched in
+                            2013, it made India the first Asian nation to reach Martian orbit and the first nation in
+                            the world to do so
+                            in its maiden attempt.
+                        </p>
+                        <p>
+                            Mangalyaan was primarily designed to demonstrate India's capability to reach Mars and
+                            conduct scientific
+                            experiments. It continues to study the Martian surface and atmosphere, providing valuable
+                            data for research
+                            purposes.
+                        </p>
+                        <div class="read-more lnk">
+                            <a href="./pages/missions.html">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+
+
+        <section class="latest-videos">
+            <h1 class="unusual-text"> LATEST IN ISRO : The Prestigious Chandrayaan 3</h1>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7oHAme_c0lE" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </section>
+
+
+
+
+
+        <h2 class="section-heading">International Collaborations</h2>
+        <div class="space-agencies">
+            <div class="agency">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/1059px-Indian_Space_Research_Organisation_Logo.svg.png"
+                    alt="ISRO">
+            </div>
+            <div class="img2">
+                <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt="NASA">
+            </div>
+            <div class="agency">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Jaxa_logo.svg/2560px-Jaxa_logo.svg.png"
+                    alt="JAXA">
+            </div>
+        </div>
     </section>
     <!-- *-----Footer-----* -->
-    <!-- <footer class="foot flex">
-        <a href="https://www.youtube.com" class="lnk"><img src="./assets/youtube.svg" alt="Youtube"></a>
-        <a href="https://www.instagram.com" class="lnk"><img src="./assets/instagram.svg" alt="Instagram"></a>
-        <a href="https://www.x.com" class="lnk"><img src="./assets/x.svg" alt="X / Twitter"></a>
-    </footer> -->
+    <footer class="foot flex">
+        <div class="medialnks flex">
+            <a href="https://www.youtube.com" target="_blank" class="lnk"><img src="./assets/youtube.svg"
+                    alt="Youtube"></a>
+            <a href="https://www.instagram.com" target="_blank" class="lnk"><img src="./assets/instagram.svg"
+                    alt="Instagram"></a>
+            <a href="https://www.x.com" target="_blank" class="lnk"><img src="./assets/x.svg" alt="X / Twitter"></a>
+        </div>
+        <p class="copyright">
+            &copy; Indian Space Research Organization | All Rights Reserved | Made with ❤️ for ISRO by Bhavans Vadodara
+        </p>
+    </footer>
 </body>
 
 </html>
