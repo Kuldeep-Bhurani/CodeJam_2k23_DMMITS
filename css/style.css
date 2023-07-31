@@ -243,10 +243,10 @@ h2 {
 section.missions {
 	background-color: #141414;
 	min-height: 89.3svh;
-	font-family: "Sintony", sans-serif;
 	animation: fade-in ease-in-out 1s;
 	overflow: hidden;
 	color: white;
+	font-family: "Sintony", sans-serif;
 	font-weight: 700;
 	font-size: 1.5rem;
 }
@@ -268,12 +268,26 @@ section.missions {
 	user-select: none;
 }
 
+#image-track > a {
+	text-decoration: none;
+}
+
 #image-track > a > .image {
 	width: 40vmin;
 	height: 56vmin;
 	object-fit: cover;
 	object-position: 100% center;
 	border-radius: 2%;
+}
+
+span.img_title {
+	color: white;
+	user-select: none;
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 1.5rem;
+	align-items: center;
+	padding-left: 0.3rem;
 }
 
 /* TODO: History Page */

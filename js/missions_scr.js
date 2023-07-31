@@ -44,13 +44,13 @@ window.onmousemove = e => handleOnMove(e);
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 
 // !Hover Effects
-const images = document.querySelectorAll(".image")
-images.forEach(image => {
-    image.addEventListener('mouseover', () => {
+const track_lnk = document.querySelectorAll(".track_lnk")
+track_lnk.forEach(lnk => {
+    lnk.addEventListener('mouseover', () => {
         mouseCursor.classList.add("social-grow");
         mouseCursor.classList.add("c-grow");
     });
-    image.addEventListener('mouseleave', () => {
+    lnk.addEventListener('mouseleave', () => {
         mouseCursor.classList.remove("social-grow");
         mouseCursor.classList.remove("c-grow");
     });
