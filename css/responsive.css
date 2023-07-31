@@ -1,3 +1,15 @@
+/* *-----Cursor-----* */
+@media (any-pointer: none) {
+	.cursor {
+		display: none;
+	}
+}
+@media (any-hover: none) {
+	.cursor {
+		display: none;
+	}
+}
+
 /* *-----Navigation-----* */
 
 @media (max-width: 35em) {
